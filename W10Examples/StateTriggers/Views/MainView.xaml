@@ -1,0 +1,71 @@
+﻿<Page
+    x:Class="StateTriggers.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StateTriggers.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:t="using:StateTriggers.Views.Triggers"
+    mc:Ignorable="d" x:Name="PageInstance">
+
+    <RelativePanel x:Name="MainPanel" Background="Green">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="VisualStatePhoneLandscape">
+                    <VisualState.StateTriggers>
+                        <t:DeviceTrigger Family="Mobile" Orientation="Landscape"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="PageInstance.TileSize" Value="120" />
+                        <Setter Target="MainPanel.Background" Value="Yellow" />
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="VisualStatePhonePortrait">
+                    <VisualState.StateTriggers>
+                        <t:DeviceTrigger Family="Mobile" Orientation="Portrait"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="PageInstance.TileSize" Value="96" />
+                        <Setter Target="MainPanel.Background" Value="Blue" />
+                    </VisualState.Setters>
+                </VisualState>
+
+
+                <VisualState x:Name="VisualStateTabletLandscape" >
+                    <VisualState.StateTriggers>
+                        <t:DeviceTrigger Family="Desktop" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="PageInstance.TileSize" Value="144" />
+                        <Setter Target="MainPanel.Background" Value="White" />
+                    </VisualState.Setters>
+                </VisualState>
+
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        <ItemsControl x:Name="ItemsPanel" >
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapGrid Margin="0,40,0,0" Orientation="Horizontal"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate   >
+                    <Border  Background="Orange" Margin="6,0,0,6" Padding="6" Height="{Binding TileSize, ElementName=PageInstance}" Width="{Binding TileSize, ElementName=PageInstance}">
+                        <TextBlock Foreground="White" FontSize="20" Text="Asignatura"/>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.Items>
+                <x:Int32>1</x:Int32>
+                <x:Int32>1</x:Int32>
+                <x:Int32>1</x:Int32>
+                <x:Int32>1</x:Int32>
+                <x:Int32>1</x:Int32>
+                <x:Int32>1</x:Int32>
+            </ItemsControl.Items>
+        </ItemsControl>
+    </RelativePanel>
+</Page>
