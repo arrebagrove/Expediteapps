@@ -11,36 +11,35 @@
     <RelativePanel x:Name="MainPanel" Background="Green">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="VisualStatePhoneLandscape">
-                    <VisualState.StateTriggers>
-                        <t:DeviceTrigger Family="Mobile" Orientation="Landscape"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="PageInstance.TileSize" Value="120" />
-                        <Setter Target="MainPanel.Background" Value="Yellow" />
-                    </VisualState.Setters>
-                </VisualState>
+    <VisualState x:Name="VisualStatePhoneLandscape">
+        <VisualState.StateTriggers>
+            <t:DeviceTrigger Family="Mobile" Orientation="Landscape"/>
+        </VisualState.StateTriggers>
+        <VisualState.Setters>
+            <Setter Target="PageInstance.TileSize" Value="120" />
+            <Setter Target="MainPanel.Background" Value="Yellow" />
+        </VisualState.Setters>
+    </VisualState>
 
-                <VisualState x:Name="VisualStatePhonePortrait">
-                    <VisualState.StateTriggers>
-                        <t:DeviceTrigger Family="Mobile" Orientation="Portrait"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="PageInstance.TileSize" Value="96" />
-                        <Setter Target="MainPanel.Background" Value="Blue" />
-                    </VisualState.Setters>
-                </VisualState>
+    <VisualState x:Name="VisualStatePhonePortrait">
+        <VisualState.StateTriggers>
+            <t:DeviceTrigger Family="Mobile" Orientation="Portrait"/>
+        </VisualState.StateTriggers>
+        <VisualState.Setters>
+            <Setter Target="PageInstance.TileSize" Value="96" />
+            <Setter Target="MainPanel.Background" Value="Blue" />
+        </VisualState.Setters>
+    </VisualState>
 
-
-                <VisualState x:Name="VisualStateTabletLandscape" >
-                    <VisualState.StateTriggers>
-                        <t:DeviceTrigger Family="Desktop" />
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="PageInstance.TileSize" Value="144" />
-                        <Setter Target="MainPanel.Background" Value="White" />
-                    </VisualState.Setters>
-                </VisualState>
+    <VisualState x:Name="VisualStateTabletLandscape" >
+        <VisualState.StateTriggers>
+            <t:DeviceTrigger Family="Desktop" />
+        </VisualState.StateTriggers>
+        <VisualState.Setters>
+            <Setter Target="PageInstance.TileSize" Value="144" />
+            <Setter Target="MainPanel.Background" Value="White" />
+        </VisualState.Setters>
+    </VisualState>
 
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>

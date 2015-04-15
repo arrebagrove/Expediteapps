@@ -12,31 +12,25 @@ using Windows.UI.Xaml;
 namespace StateTriggers.Services
 {
     #region Enums
-    public enum Families
-    {
-        Mobile,
-        Desktop
-    }
+    public enum Families { Mobile, Desktop }
 
-    public enum Orientations
-    {
-        Portrait,
-        Landscape
-    }
+    public enum Orientations { Portrait, Landscape }
 
     public class DeviceInformation
     {
         public static Orientations Orientation =>
-            DisplayInformation.GetForCurrentView().CurrentOrientation.ToString().Contains("Landscape") ? Orientations.Landscape : Orientations.Portrait;
+            DisplayInformation.GetForCurrentView().CurrentOrientation.ToString().Contains("Landscape") 
+            ? Orientations.Landscape : Orientations.Portrait;
 
         public static Families Family =>
-             GetForCurrentView().QualifierValues["DeviceFamily"] == "Mobile" ? Families.Mobile : Families.Desktop;
+             GetForCurrentView().QualifierValues["DeviceFamily"] == "Mobile" 
+            ? Families.Mobile : Families.Desktop;
 
         public static DisplayInformation DisplayInformation =>
             DisplayInformation.GetForCurrentView();
 
         public static Frame DisplayFrame =>
                 Window.Current.Content == null ? null : Window.Current.Content as Frame;
-}
+    }
     #endregion
 }

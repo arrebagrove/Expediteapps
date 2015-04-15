@@ -29,7 +29,7 @@ namespace StateTriggers.Views
         }
 
         public static readonly DependencyProperty TileSizeProperty =
-            DependencyProperty.Register("TileSize", typeof(double), typeof(MainView), new PropertyMetadata(96));
+            DependencyProperty.Register(nameof(TileSize), typeof(double), typeof(MainView), new PropertyMetadata(96));
 
 
 

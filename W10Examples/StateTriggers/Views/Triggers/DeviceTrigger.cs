@@ -20,7 +20,8 @@ namespace StateTriggers.Views.Triggers
             set { SetValue(FamilyProperty, value); }
         }
         public static readonly DependencyProperty FamilyProperty =
-            DependencyProperty.Register("Family", typeof(Families), typeof(DeviceTrigger), new PropertyMetadata(Families.Desktop));
+            DependencyProperty.Register(nameof(Family), typeof(Families), typeof(DeviceTrigger), 
+                new PropertyMetadata(Families.Desktop));
         #endregion
 
         #region Orientation
@@ -30,7 +31,8 @@ namespace StateTriggers.Views.Triggers
             set { SetValue(OrientationProperty, value); }
         }
         public static readonly DependencyProperty OrientationProperty =
-            DependencyProperty.Register("Orientation", typeof(Orientations), typeof(DeviceTrigger), new PropertyMetadata(Orientations.Portrait));
+            DependencyProperty.Register(nameof(Orientation), typeof(Orientations), typeof(DeviceTrigger), 
+                new PropertyMetadata(Orientations.Portrait)); 
         #endregion
 
         public DeviceTrigger()
