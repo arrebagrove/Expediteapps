@@ -15,24 +15,14 @@ using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
-namespace StateTriggers.Views
+namespace W10Examples.Views
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class MainView : Page
+    public sealed partial class ContentDialogView : Page
     {
-        public double TileSize
-        {
-            get { return (double)GetValue(TileSizeProperty); }
-            set { SetValue(TileSizeProperty, value); }
-        }
-
-        public static readonly DependencyProperty TileSizeProperty =
-            DependencyProperty.Register(nameof(TileSize), typeof(double), typeof(MainView), new PropertyMetadata(96));
-
-
-        public MainView()
+        public ContentDialogView()
         {
             this.InitializeComponent();
         }

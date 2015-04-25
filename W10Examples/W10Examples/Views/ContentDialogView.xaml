@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="W10Examples.Views.ContentDialogView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:W10Examples.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="using:Microsoft.Xaml.Interactivity"
+    xmlns:b="using:W10Examples.Views.Behaviors"
+    xmlns:core ="using:Microsoft.Xaml.Interactions.Core"
+    xmlns:c ="using:Crow.Views.Converters"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    </Grid>
+
+    <Page.BottomAppBar >
+        <AppBar >
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" x:Name="AppBarStackPanel">
+                <AppBarButton Icon="ViewAll" Content="New Category">
+                    <i:Interaction.Behaviors>
+                        <b:ContentDialogBehavior>
+                            <b:ContentDialogBehavior.ContentDialog>
+                                <ContentDialog FullSizeDesired="True" Title="New Category"  PrimaryButtonText="Accept" SecondaryButtonText="Cancel" >
+                                    <ContentDialog.ContentTransitions>
+                                        <TransitionCollection>
+                                            <ContentThemeTransition />
+                                        </TransitionCollection>
+                                    </ContentDialog.ContentTransitions>
+                                </ContentDialog>
+                            </b:ContentDialogBehavior.ContentDialog>
+                            <b:ContentDialogBehavior.DataTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,6,0,0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="Auto"/>
+                                            <RowDefinition Height="1*"/>
+                                        </Grid.RowDefinitions>
+                                        <StackPanel  >
+                                            <TextBlock Margin="0,6,0,0" Text="Name" FontSize="12"/>
+                                            <TextBox Margin="0,6,0,0"  Text="" Width="300"/>
+                                            <TextBlock Margin="0,6,0,0" Text="Image" FontSize="12"/>
+                                        </StackPanel>
+                                    </Grid>
+                                </DataTemplate>
+                            </b:ContentDialogBehavior.DataTemplate>
+                        </b:ContentDialogBehavior>
+                    </i:Interaction.Behaviors>
+                </AppBarButton>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+</Page>

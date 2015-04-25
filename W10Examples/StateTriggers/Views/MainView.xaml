@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:t="using:StateTriggers.Views.Triggers"
-    mc:Ignorable="d" x:Name="PageInstance">
+    mc:Ignorable="d" x:Name="PageInstance" >
 
     <RelativePanel x:Name="MainPanel" Background="Green">
         <VisualStateManager.VisualStateGroups>
@@ -53,7 +53,7 @@
             <ItemsControl.ItemTemplate>
                 <DataTemplate   >
                     <Border  Background="Orange" Margin="6,0,0,6" Padding="6" Height="{Binding TileSize, ElementName=PageInstance}" Width="{Binding TileSize, ElementName=PageInstance}">
-                        <TextBlock Foreground="White" FontSize="20" Text="Asignatura"/>
+                        <TextBlock Foreground="White" FontSize="20" Text="Subject"/>
                     </Border>
                 </DataTemplate>
             </ItemsControl.ItemTemplate>
