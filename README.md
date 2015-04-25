@@ -23,3 +23,10 @@ Is like the implementation of Flyout that does not exist (until now)
     </b:ContentDialogBehavior>
 </i:Interaction.Behaviors>
 ```
+
+<b>EventTriggerBehavior </b>
+
+When the event user is EventName="KeyUp" the parameter that arrives is not the key so to solve you need a simple Converter called EventKeyConverter and the Examaple contains the Command in the ViewModel KeyEventTriggerViewModel.cs
+
+
+
