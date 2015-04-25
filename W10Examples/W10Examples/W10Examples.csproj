@@ -116,9 +116,15 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\Base\Command.cs" />
+    <Compile Include="ViewModels\KeyEventTriggerViewModel.cs" />
     <Compile Include="Views\Behaviors\ContentDialogBehavior.cs" />
     <Compile Include="Views\ContentDialogView.xaml.cs">
       <DependentUpon>ContentDialogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Converters\EventKeyConverter.cs" />
+    <Compile Include="Views\KeyEventTriggerView.xaml.cs">
+      <DependentUpon>KeyEventTriggerView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +156,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\KeyEventTriggerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ApplicationInsights">
@@ -167,6 +177,7 @@
       <Name>Behaviors SDK %28XAML%29</Name>
     </SDKReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
