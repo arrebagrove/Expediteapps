@@ -1,7 +1,7 @@
 # Expediteapps
 Expediteapps examples
 
-Due the new controls and possibilities in Windows UAP (Windows 10) Apps and the different 'issues' at the moment I present here several examples on how to implement different controls
+Due to the new controls and possibilities in Windows UAP (Windows 10) Apps and the different 'issues' at the moment I present here several examples on how to implement different controls
 
 
 <b>ContentDialogBehavior</b>
