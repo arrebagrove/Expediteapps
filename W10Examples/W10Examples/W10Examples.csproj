@@ -116,6 +116,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ToSolve\LaunchNavigator.cs" />
     <Compile Include="ViewModels\Base\Command.cs" />
     <Compile Include="ViewModels\KeyEventTriggerViewModel.cs" />
     <Compile Include="Views\Behaviors\ContentDialogBehavior.cs" />
